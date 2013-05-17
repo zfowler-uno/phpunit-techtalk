@@ -15,6 +15,6 @@ class Calculator {
     }
 
     public function multiply($a, $b) {
-        
+
     }
 }

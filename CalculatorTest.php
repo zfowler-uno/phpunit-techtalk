@@ -43,6 +43,14 @@ class CalculatorTest extends PHPUnit_Framework_TestCase {
         $this->assertEquals($expectedResult,$result);
     }
 
+    function testDivideByZeroReturnsFalse() {
+        $numberToDivideBy = 0;
+        $numberToDivideInto = 100;
+        $expectedResult = false;
+        $result = $this->c->divide(0,100);
+        $this->assertEquals($expectedResult, $result);
+    }
+
     // multiply function test
     function testMultiply() {
         $firstNumberToMultiply = 5;
