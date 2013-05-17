@@ -3,33 +3,52 @@
 // require
 require 'Calculator.php';
 class CalculatorTest extends PHPUnit_Framework_TestCase {
+
+    private $c;
+
     // setup
+    public function setUp() {
+        $this->c = new Calculator();
+    }
+
+    // tear down
+    public function tearDown() {
+        unset($this->c);
+    }
 
     // add function test
     function testAdd() {
-        $c = new Calculator();
-        $result = $c->add(10,5);
-        $this->assertEquals(15,$result);
+        $firstNumberToAdd = 10;
+        $secondNumberToAdd = 5;
+        $expectedResult = 15;
+        $result = $this->c->add($firstNumberToAdd,$secondNumberToAdd);
+        $this->assertEquals($expectedResult,$result);
     }
 
     // substract function test
     function testSubtract() {
-        $c = new Calculator();
-        $result = $c->subtract(20,8);
-        $this->assertEquals(12,$result);
+        $firstNumberToSubtractFrom = 20;
+        $secondNumberToSubtract = 8;
+        $expectedResult = 12;
+        $result = $this->c->subtract($firstNumberToSubtractFrom, $secondNumberToSubtract);
+        $this->assertEquals($expectedResult,$result);
     }
 
     // divide function test
     function testDivide() {
-        $c = new Calculator();
-        $result = $c->divide(100,20);
-        $this->assertEquals(5,$result);
+        $firstNumberToDivideInto = 100;
+        $secondNumberToDivideWith = 20;
+        $expectedResult = 5;
+        $result = $this->c->divide($firstNumberToDivideInto,$secondNumberToDivideWith);
+        $this->assertEquals($expectedResult,$result);
     }
 
     // multiply function test
     function testMultiply() {
-        $c = new Calculator();
-        $result = $c->multiply(5,27);
-        $this->assertEquals(135, $result);
+        $firstNumberToMultiply = 5;
+        $secondNumberToMultiply = 27;
+        $expectedResult = 135;
+        $result = $this->c->multiply($firstNumberToMultiply,$secondNumberToMultiply);
+        $this->assertEquals($expectedResult, $result);
     }
 }
