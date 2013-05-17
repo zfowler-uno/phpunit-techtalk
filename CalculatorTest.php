@@ -1,12 +1,15 @@
 <?php
-/**
- * Created by JetBrains PhpStorm.
- * User: zfowler
- * Date: 5/17/13
- * Time: 11:25 AM
- * To change this template use File | Settings | File Templates.
- */
+
+// require
 
 class CalculatorTest extends PHPUnit_Framework_TestCase {
+    // setup
 
+    // add function test
+
+    // substract function test
+
+    // divide function test
+
+    // multiply function test
 }
